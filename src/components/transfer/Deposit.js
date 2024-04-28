@@ -230,6 +230,30 @@ export default function Deposit({ open, setOpen, type, setType }) {
                                             {t("Deposit")}
                                         </h1>
                                         <div className="input-wrapper">
+                                            <label htmlFor="transfertype">
+                                                {t("Transfer Type")}
+                                            </label>
+                                            {/* <label htmlFor='email'>{t("Email / Phone Number")}</label> */}
+                                            <input
+                                                type="number"
+                                                value={amount}
+                                                onChange={handleAmountChange}
+                                                style={{
+                                                    borderColor:
+                                                        amount === ""
+                                                            ? ""
+                                                            : "#939393",
+                                                }}
+                                                placeholder={t("Transfer Type")}
+                                                // placeholder='Jackrose11@gmail.com'
+                                                ref={amountRef}
+                                                id="transfertype"
+                                                className="rounded-lg px-6 mt-3 !text-white"
+                                                autoFocus
+                                            />
+                                        </div>
+
+                                        <div className="input-wrapper">
                                             <label htmlFor="amount">
                                                 {t("Amount")}
                                             </label>
