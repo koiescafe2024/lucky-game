@@ -37,7 +37,7 @@ export default function Deposit({ open, setOpen, type, setType }) {
     const [isEmailValid, setIsEmailValid] = useState(false);
     const cancelButtonRef = useRef(null);
     const amountRef = useRef(null);
-
+    const transTypeRef = useRef(null);
     const handleAmountChange = (e) => {
         const amount = e.target.value;
         setAmount(amount);
@@ -235,9 +235,9 @@ export default function Deposit({ open, setOpen, type, setType }) {
                                             </label>
                                             {/* <label htmlFor='email'>{t("Email / Phone Number")}</label> */}
                                             <input
-                                                type="number"
+                                                type="string"
                                                 value={amount}
-                                                onChange={handleAmountChange}
+                                               
                                                 style={{
                                                     borderColor:
                                                         amount === ""
@@ -246,7 +246,7 @@ export default function Deposit({ open, setOpen, type, setType }) {
                                                 }}
                                                 placeholder={t("Transfer Type")}
                                                 // placeholder='Jackrose11@gmail.com'
-                                                ref={amountRef}
+                                                ref={transTypeRef}
                                                 id="transfertype"
                                                 className="rounded-lg px-6 mt-3 !text-white"
                                                 autoFocus
